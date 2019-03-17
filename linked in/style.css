@@ -1,0 +1,97 @@
+body{
+    background-color: #007DA9;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+}
+.first{
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    margin: 2% auto auto auto;
+}
+.first span{
+    height: 30px;
+    width: 20px;
+    background-color: white;
+    color: #007DA9;
+    border-radius: 2px;
+    border-left: 10px;
+}
+form{
+   margin: 2% 38% 5% 38%;
+    text-align: left;
+    padding: 2%;
+    background: #E7F3E9;
+}
+h5{
+    padding: 10px 0 0 0;
+    margin: 0;
+   text-align: left;
+    color: grey;
+    font-size: 13px;
+    font-family: 'Oxygen', sans-serif;
+
+}
+input[type="text"]{
+    width: 100%;
+    padding-top: 0;
+}
+
+input[type="password"]{
+    width: 100%;
+    padding-top: 0;
+}
+
+.link1{
+    text-decoration: none;
+    color: black;
+}
+.link1:hover{
+    color: #1a8cff;
+}
+.button{
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: 2px solid grey;
+    font-weight: bold;
+    text-decoration: none;
+    height: auto;
+    color: white;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 5px;
+    background: #aadddd;
+    font-weight: bold;
+    background: -moz-linear-gradient(top, #0073e6 0%, #0066cc 50%);
+    background: -webkit-linear-gradient(top, #0073e6 0%, #0066cc 50%);
+    background: linear-gradient(top, #0073e6 0%, #0066cc 50%);
+}
+hr{
+    color: grey;
+}
+.button1{
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: 2px solid grey;
+    font-weight: bold;
+    text-decoration: none;
+    height: auto;
+    color: white;
+    background: blue;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 15px;
+}
+.button1 h1{
+    padding: 0;
+    margin: 0;
+    float: left;
+}
