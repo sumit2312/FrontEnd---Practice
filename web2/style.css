@@ -1,0 +1,11 @@
+#message{
+    height: 200px;
+    width: 400px;
+    background: rgb(90, 45, 45);
+    margin: 50px auto;
+    opacity: 1;
+}
+/*
+#message.show{
+    opacity: 1;
+}*/
