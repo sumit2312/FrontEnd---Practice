@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .hide{
+            display: none;
+        }
+       body{
+           margin:0 20%;
+       }
+    img{
+        height: 400px;
+        width: 400px;
+    }
+    </style>
+</head>
+<body>
+    
+    <header><h1>JavaScript Events</h1></header>
+
+    <h4>Pictures</h4>
+
+    <ul>
+        <li><a data-img="simon-pic" id="simon" href="#">Simon Powel</a></li>
+        <li><a data-img="bruce-pic" id="bruce" href="#">Bruce Willis</a></li>
+        <li><a data-img="ben-pic" id="ben" href="#">Ben Carlos</a> </li>
+    </ul>
+    <img class="hide" id="simon-pic" src="1.jpg"> <br>
+    <img class="hide" id="bruce-pic" src="2.jpg"><br>
+    <img class="hide" id="ben-pic" src="3.jpg">
+
+
+
+
+    <script>
+    var simon = document.getElementById("simon");
+    var simonPic = document.getElementById("simon-pic");
+    var bruce = document.getElementById("bruce");
+    var brucePic = document.getElementById("bruce-pic");
+    var ben = document.getElementById("ben");
+    var benPic = document.getElementById("ben-pic");
+
+    // simon.addEventListener("click",function(){
+    //     if(simonPic.className === "hide"){
+    //         simonPic.className = "";
+    //     }else{
+    //         simonPic.className = "hide";
+    //     }
+    // });
+
+    // bruce.addEventListener("click",function(){
+    //     if(brucePic.className === "hide"){
+    //         brucePic.className = "";
+    //     }else{
+    //         brucePic.className = "hide";
+    //     }
+    // });
+
+    // ben.addEventListener("click",function(){
+    //     if(benPic.className === "hide"){
+    //         benPic.className = "";
+    //     }else{
+    //         benPic.className = "hide";
+    //     }
+    // });
+
+        simon.addEventListener("click", picLink);
+        bruce.addEventListener("click", picLink);
+        ben.addEventListener("click", picLink);
+
+        function picLink(){
+        
+           var  allImages = document.querySelectorAll("img");
+           for(i=0;i<allImages.length;i++){
+               allImages[i].className="hide";
+        }
+           
+            var picId = this.attributes["data-img"].value;
+          
+           var pic = document.getElementById(picId);
+           if(pic.className === "hide"){
+               pic.className="";
+           }else{
+               pic.className="hide";
+           }
+
+           
+        }
+
+    </script>
+</body>
+</html>

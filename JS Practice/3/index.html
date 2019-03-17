@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+       
+    body{
+        font-family: "helvetica neve";
+        color: #666;
+        padding: 5% 20%;
+        font-size: 30px;
+    }
+    li input{
+        display: none;
+    }
+    li.edit span{
+        display: none;
+    }
+    li.edit input{
+        display: initial;
+    }
+    </style>
+   
+</head>
+<body>
+    <header><h1>Javascript Events</h1></header>
+    <main>
+        <ul id="checklist">
+            <li>
+                <span>Apple</span>
+                <input value="Apple" />   
+            </li>
+            <li>
+                <span>Oranges</span>
+                <input value="Orange" />
+            </li>
+            <li>
+                <span>Banana</span>
+                <input value="Banana">
+            </li>
+        </ul>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
