@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <style>
+        body {
+            background: #ccc;
+            position: relative;
+        }
+
+        #carousel {
+            background: rgb(206, 206, 73);
+            overflow: hidden;
+            width: 600px;
+            height: 150px;
+            position: relative;
+        }
+
+        .item {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px;
+            width: 150px;
+            transition: left .5s ease;
+            background: white;
+            position: absolute;
+            z-index: 1;
+        }
+
+        button{
+            z-index: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="my-5 text-center">Carousel</h1>
+    <div class="wrapper">
+        <div class="row justify-content-center">
+            <div class="col-1 align-self-center text-center">
+                <button class="btn btn-primary" id="prevBtn">prev</button>
+            </div>
+            <div class="col-6 text-center">
+                <div id="carousel" class="mx-auto">
+                    <div class="item">
+                        <h2>one</h2>
+                        <p>one</p>
+                    </div>
+                    <div class="item">
+                        <h2>two</h2>
+                        <p>two</p>
+                    </div>
+                    <div class="item">
+                        <h2>three</h2>
+                        <p>three</p>
+                    </div>
+                    <div class="item">
+                        <h2>four</h2>
+                        <p>four </p>
+                    </div>
+                    <div class="item">
+                        <h2>five</h2>
+                        <p>five</p>
+                    </div>
+                    <div class="item">
+                        <h2>six</h2>
+                        <p>six</p>
+                    </div>
+                    <div class="item">
+                        <h2>seven</h2>
+                        <p>seven</p>
+                    </div>
+                    <div class="item">
+                        <h2>eight</h2>
+                        <p>eight</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1 align-self-center text-center">
+                <button class="btn btn-primary" id="nextBtn">next</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var items = document.querySelectorAll('.item');
+        items.forEach(function (item, index) {
+            item.style.left = index * 200 + 'px'
+        })
+
+        var prevBtn = document.querySelector('#prevBtn')
+        var nextBtn = document.querySelector('#nextBtn')
+        // add event listener
+
+        prevBtn.addEventListener('click', function () {
+            if (Number(items[items.length -1].style.left.slice(0,-2))==400) {
+                console.log('last element cant move')
+                return
+            }
+            items.forEach(function (item, index) {
+                newLeft = Number(item.style.left.slice(0, -2)) - 200
+                item.style.left = newLeft + 'px'
+            })
+        })
+
+        nextBtn.addEventListener('click', function () {
+            if (Number(items[0].style.left.slice(0,-2))==0) {
+                console.log('first element cant move')
+                return
+            }
+            items.forEach(function (item, index) {
+                item.style.left = Number(item.style.left.slice(0, -2)) + 200 + 'px'
+            })
+        })
+    </script>
+</body>
+
+</html>
