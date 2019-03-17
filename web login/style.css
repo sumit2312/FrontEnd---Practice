@@ -1,0 +1,60 @@
+body{
+  align-items: center;
+  background-image: url(img1.jpg);
+  height: 100%;
+
+}
+#box1{
+  margin: 10% 40%;
+  height: auto;
+  width: auto;
+  text-align: center;
+  background: rgba(52, 73, 100,0.7);      
+
+}
+#box1 form h2{
+    padding-top: 30px;
+    color: white;
+    font-size: 45px;
+}
+input[type="text"]{
+    margin: 25px ;
+    height: 30px;
+    width: 75%;
+   font-family: sans-serif;
+    font-size: 20px;
+   
+}
+input[type="password"]{
+    margin: 10px auto 30px;;
+    height: 30px;
+    width: 75%;
+    font-size: 20px;
+   
+}
+input[type="button"]{
+    margin: 10px auto 30px;;
+    height: 35px;
+    width: 75%;
+    font-size: 20px;
+    cursor: pointer;
+    background: rgba(70, 130, 180,0.8);
+    border: 0;
+    padding: 5px;
+    color: white;
+}
+input[type="button"]:hover{
+    background: #1a8cff; 
+}
+p{
+    color: white;
+    padding-bottom: 40px;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: darkorange;
+}
+a:hover{
+    color: crimson;
+}
