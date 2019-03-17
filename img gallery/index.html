@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="slideshow-container">
+
+        <div class="myslide fade"><div> <div class="number text"> 2/3</div> <img src="3.jpg" style="width:100%"> </div>
+        <div class="myslide fade"><div> <div class="number text"> 3/3</div> <img src="2.jpg" style="width:100%"> </div>
+        <div class="myslide fade"><div> <div class="number text"> 1/3</div> <img src="2.jpg" style="width:100%"> </div>
+
+        <a class="prev" onclick="plusSlide(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlide(1)">&#10095;</a>
+
+    </div>
+
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlide(n){
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n){
+            var i;
+            var slides = document.getElementsByClassName("myslide");
+            if(n > slides.length) {slideIndex=1;}
+            if(n<1) {slideIndex = slides.length}
+            
+            for(i=0;i<slides.length;i++){
+                slides[i].style.display="none";
+            }
+            slides[slideIndex-1].style.display="block";
+        }
+     </script>
+</body>
+</html>
